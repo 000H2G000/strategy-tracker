@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-navy-900 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white min-h-screen;
+    background-image: 
+      radial-gradient(at 10% 10%, rgba(14, 165, 233, 0.08) 0px, transparent 50%),
+      radial-gradient(at 90% 20%, rgba(239, 68, 68, 0.06) 0px, transparent 50%),
+      radial-gradient(at 50% 90%, rgba(245, 158, 11, 0.06) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Inter', sans-serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #071a33;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e477a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2a5d9e;
+}
+
+/* Glassmorphism card utilities */
+.glass-panel {
+  background: rgba(16, 41, 74, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(22, 53, 94, 0.85);
+  border-color: rgba(255, 255, 255, 0.16);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Pillar glow effects */
+.glow-membership {
+  box-shadow: 0 0 25px -5px rgba(239, 68, 68, 0.25);
+}
+
+.glow-exchange {
+  box-shadow: 0 0 25px -5px rgba(14, 165, 233, 0.25);
+}
+
+.glow-external {
+  box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.25);
+}
+
+/* Pulsing badge animation */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
