@@ -1,6 +1,6 @@
 import React from 'react';
-import { Users, CheckCircle2, AlertCircle, PlayCircle, Award } from 'lucide-react';
-import { ActionItem } from '../types';
+import { Users } from 'lucide-react';
+import type { ActionItem } from '../types';
 import { getOwnerStatistics, CURRENT_REF_DATE } from '../utils/calculations';
 
 interface OwnerAccountabilityProps {

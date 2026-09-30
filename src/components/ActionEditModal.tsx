@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, Save, Trash2, Link } from 'lucide-react';
-import { ActionItem, Strategy, StrategicArea, KPI, StrategyId, QuarterId, StatusType } from '../types';
+import type { ActionItem, Strategy, StrategicArea, KPI, StrategyId, QuarterId, StatusType } from '../types';
 
 interface ActionEditModalProps {
   isOpen: boolean;
@@ -18,7 +18,7 @@ export const ActionEditModal: React.FC<ActionEditModalProps> = ({
   isOpen,
   onClose,
   action,
-  strategies,
+  strategies: _strategies,
   areas,
   kpis,
   owners,

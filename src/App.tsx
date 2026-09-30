@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Dashboard } from './components/Dashboard';
 import { StrategyDetail } from './components/StrategyDetail';
@@ -10,7 +10,7 @@ import { TimelineView } from './components/TimelineView';
 import { OwnerAccountability } from './components/OwnerAccountability';
 
 import { SEED_STRATEGIES, SEED_AREAS, SEED_QUARTERS, SEED_OWNERS } from './data/seedData';
-import { ActionItem, KPI, StrategyId, StatusType } from './types';
+import type { ActionItem, KPI, StrategyId, StatusType } from './types';
 import { loadActions, saveActions, loadKPIs, saveKPIs, resetToSeedData } from './services/storage';
 import { isActionOverdue } from './utils/calculations';
 
@@ -128,7 +128,7 @@ export function App() {
     setIsQuickUpdateOpen(true);
   };
 
-  const handleOpenNewAction = (strategyId?: StrategyId, areaId?: string) => {
+  const handleOpenNewAction = (_strategyId?: StrategyId, _areaId?: string) => {
     setEditingAction(null);
     setIsEditModalOpen(true);
   };
@@ -143,7 +143,7 @@ export function App() {
     setActiveTab('strategies');
   };
 
-  const handleSelectOwner = (owner: string) => {
+  const handleSelectOwner = (_owner: string) => {
     setActiveTab('actions');
   };
 

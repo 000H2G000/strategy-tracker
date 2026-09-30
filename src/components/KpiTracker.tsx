@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TrendingUp, Plus, Check, Edit2, User, Clock } from 'lucide-react';
-import { KPI, Strategy, StrategyId, KpiUnit } from '../types';
+import type { KPI, Strategy, StrategyId, KpiUnit } from '../types';
 import { getKpiAchievement } from '../utils/calculations';
 
 interface KpiTrackerProps {

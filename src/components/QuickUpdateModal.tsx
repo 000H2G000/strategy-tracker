@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { X, Zap, ChevronLeft, ChevronRight, Check, Sparkles } from 'lucide-react';
-import { ActionItem, StatusType } from '../types';
+import { X, Zap, ChevronLeft, ChevronRight } from 'lucide-react';
+import type { ActionItem, StatusType } from '../types';
 import confetti from 'canvas-confetti';
 
 interface QuickUpdateModalProps {

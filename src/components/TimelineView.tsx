@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Calendar, Flag, CheckCircle2, Clock, Zap } from 'lucide-react';
-import { QuarterInfo, ActionItem, QuarterId } from '../types';
+import { Calendar, Flag, CheckCircle2, Zap } from 'lucide-react';
+import type { QuarterInfo, ActionItem, QuarterId } from '../types';
 import { getActionProgress, isActionOverdue } from '../utils/calculations';
 
 interface TimelineViewProps {
